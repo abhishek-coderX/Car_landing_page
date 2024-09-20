@@ -1,0 +1,921 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: roboto;
+    }
+
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        /* background: #000; */
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    
+    }
+
+    #navbar {
+        /* background-color: yellow; */
+        padding: 40px 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 24px;
+        border-bottom: 25px solid #C4C4C4; 
+        
+    }
+
+    #nav1 {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        transition: ease-in-out;
+        cursor: pointer;
+    }
+
+    
+    #nav1 h5:hover{
+        border-bottom: 2px solid blue;
+    }
+
+    #nav2 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
+       
+        
+    }
+    
+   
+    
+    #nav2 i{
+
+display: none;
+    }
+
+    #part2 {
+        width: 100%;
+        height: calc(100vh - 105px); 
+        /* background-color: aqua; */
+        padding: 20px;
+    }
+
+    #text h1{
+        position: absolute;
+        font-size:230px;
+        font-weight: 300;
+    }
+    #text h4{
+        position: absolute;
+        font-size:20px;
+        background-color:#f1bc00;
+        padding: 4px 6px ;
+        font-weight: 400;
+        top: 38%;
+        left: 20%;
+        border-radius: 10px;
+        transform: translate(-50%,-50%);
+    }
+
+    #car{
+        position: absolute;
+        left: 9%;
+        top: 25%;
+        
+        
+    }
+    #car img{
+        width: 70vw;
+    
+
+    }
+
+    #sidetext{
+        padding: 10px;
+        position: absolute;
+        width: 16vw;
+        height: 14vw;
+        top: 50%;left: 79%;
+        /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+
+    }
+
+
+    #sidetext .s1{
+        font-family: DM Serif Display;font-size: 32px;font-weight: 600;text-align: left;
+    }
+
+
+    #sidetext .s2{
+        font-family: Roboto;font-size: 26px;font-weight: 400;line-height: 30.47px;text-align: left;
+    }
+
+
+    #sidetext .s3{
+        background-color: #21408E;
+        width: 50%;
+        text-align: center;
+        padding: 10px 8px;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+
+    
+    }
+
+    
+    #sidetext .s3:hover {
+        background-color: #1E70E7; /* Change the button color on hover */
+        transform: scale(1.05); /* Slightly enlarge the button */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow to the button */
+    }
+
+
+
+    #page2{
+        width: 100%;
+        height: 100%;
+      
+        display: flex;
+    }
+
+    #left{
+        width: 60%;
+        height: 100%;
+        padding-left: 2vw;
+        /* background-color: #C4C4C4; */
+
+    }
+    #right
+    {
+        width: 40%;
+        height: 100%;
+        /* background-color: aqua; */
+        padding: 20px;
+        /* text-align: center; */
+    }
+
+    #right .heading{
+        margin-top: 6vw;
+        color: #21408E;;
+        font-family: DM Serif Display;font-size: 45px;font-weight: 600;line-height: 61.7px;margin-left: 6.5vw;
+
+    }
+
+    #right .elem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    text-align: start;
+    }
+
+    #right .elem img{
+    height: 70px;
+    width: 90px;
+    }
+    #right .elem p{
+        width: 60%;
+        font-family: Roboto;font-size: 15px;font-weight: 400;line-height: 23.44px;text-align: left;
+    }
+
+    #right .elem h4{
+        font-family: DM Serif Display;font-size: 26px;font-weight: 600;line-height: 35.65px;text-align: left;
+    }
+
+
+    #page3{
+        width: 100%;
+        height: 100%;
+        /* background-color: #C4C4C4; */
+        padding-top: 1%;
+    }
+
+    #page3 h2{
+        overflow: hidden;
+        font-family: DM Serif Display;font-size: 45px;font-weight: 400;line-height: 61.7px;text-align: center;
+    }
+
+    #page3 #cards {
+        width: 100%;
+        height: 90%;
+        padding-top: 2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        display: flex;
+        /* flex-wrap: wrap; /* Enable wrapping of cards */
+        justify-content: space-between;  */
+    }
+    
+    #page3 #cards .elem {
+        display: flex;
+        flex-direction: column;
+        width: 48%; /* Two cards per row, each taking 48% of width */
+        margin-bottom: 2%; /* Space below each row */
+        height: 80%;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 10px;
+        position: relative;
+    }
+    
+    #page3 #cards .elem .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        width: 100%;
+        height: 70%;
+        background-color: #FAF5F8;
+        border-radius: 10px;
+    }
+
+    #page3 #cards .elem .card h4{
+        padding-left: 12px;
+        font-family: Bodoni MT;font-size: 34px;font-weight: 400;line-height: 40.77px;text-align: left;
+    }
+    #page3 #cards .elem .card #car3{
+        width: 100%;
+        height: 65%;
+        background-color:#CBC9C2;
+        overflow: hidden;
+        
+    }
+    #page3 #cards .elem .card #car3 img{
+        
+    height: 120%;
+    width: 120%;
+    object-fit: contain;
+    object-position: center;
+ 
+
+    }
+
+
+
+    #page3 #cards .elem  .bottom{
+        width: 100%;
+        height: 30%;
+        background-color:#fff;
+        border-top-left-radius:10px ;
+        border-top-right-radius: 10px;
+        position: relative;
+        top: -15px;
+        
+    }
+
+    #page3 #cards .elem button{
+        padding: 6px 8px;
+        width: 50%;
+        position: absolute;
+        bottom: -1%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        border: none;
+        background-color: #21408E;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+     
+        
+    
+    }
+    #page3 #cards .elem button:hover {
+        background-color: #1E70E7; /* Change the button color on hover */
+        transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge the button */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow to the button */
+    }
+
+
+    #page3 #cards .elem  .bottom{
+        display: flex;
+        flex-direction: column;
+    justify-content: space-around;
+    }
+
+
+    #page3 #cards .elem  .bottom h5{
+        padding:4px;
+        font: 30px;
+
+        
+    }
+    #page3 #cards .elem  .bottom #h5{
+        border-radius: 20px;
+        /* background-color: #fff; */
+
+    }
+
+    #page3 #cards .elem  .bottom div {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+    
+    }
+
+    #page3 #cards .elem  .bottom  #money {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+        color:  #21408E;;
+        font-weight: 400;
+    }
+    #page3 #cards .elem  .bottom div .middle{
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+    }
+
+
+    #page4{
+        width: 100%;
+        height: 100%;
+        /* background-color: #CBC9C2; */
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    #page4 .heading1{
+        margin-bottom: 15px;
+        font-family: DM Serif Display;font-size: 45px;font-weight: 400;line-height: 65px;
+    }
+
+    #page4 h2{
+        font-weight: 300;
+        font-size: 40px;
+        width: 10;
+        border-top: 1.5px solid yellow  10px;
+    }
+    #page4 .heading2{
+    
+        padding-top: 4vw;
+    
+    
+        font-family: DM Serif Display;font-size: 45px;font-weight: 400;line-height: 61.7px;text-align: center;
+
+    }
+
+    #page4 #div1{
+        width: 100%;
+        height: 10%;
+        /* background-color: aqua; */
+        padding: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4vw 6vw;
+        margin-bottom: 4vw;
+    }
+
+
+    #page4 #div1 .elem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 12vw;
+        height: 3.4vw;
+        background-color: #C4C4C4;;
+        margin-top: 15px;
+    }
+
+    #div2{
+        width: 100%;
+        height: 30%;
+        padding: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 4vw;
+
+    }
+
+
+    #page4 #div2 .card{
+        padding-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    gap: 20px;  
+    width: 30%;
+        /* background-color: burlywood; */
+        margin-top:5vw;
+    }
+
+
+    #page4 #div2 .card h4
+    {
+        font-family: DM Serif Display;font-size: 30px;font-weight: 400;line-height: 41.13px;text-align: center;
+    }
+
+
+    #page4 #div2 .card p{
+        width: 90%;
+        height: 200px;
+        font-family: Roboto;font-size: 20px;font-weight: 400;line-height: 23.44px;text-align: center;
+    }
+
+    #page5{
+        width: 100%;
+        height: 100%;
+        padding: 4vw;
+        padding-top: 20vw;
+        background-color: #081630;
+        color: white;
+
+    }
+    #page5 #mid {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 7vw;
+        margin-left: 6vw;
+       
+        
+
+
+    }
+
+    #page5 #mid .elem div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        }
+        #page5 #mid .elem div h5{
+            font-family: Roboto;font-size: 25px;font-weight: 400;line-height: 29.3px;text-align: left;
+
+
+        }
+    #page5 #mid .elem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+        
+    
+        
+        }
+        #page5 #mid .elem  h4{
+            font-family: DM Serif Display;font-size: 28px;font-weight: 400;line-height: 38.39px;text-align: left;
+
+        }
+
+        #page5 #last{
+            margin-top: 5.5vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12vw;
+            padding-top: 2vw;
+            border-top: 1px solid #fff;
+           
+        }
+
+        #page5 #last img{
+
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+
+
+        @media (max-width: 900px) {
+            #nav1{
+                display: none;
+             }
+        
+             #nav2 i{
+                display: initial;
+             }
+        
+        
+        
+            #text h1 {
+                font-size: 16vh;
+                font-weight: 300;
+                top: 30%;
+            }
+        
+            #text h4 {
+                position: absolute;
+                font-size: 12px;
+                background-color: #f1bc00;
+                padding: 3px 4px;
+                font-weight: 400;
+                top: 40%;
+                left: 26%;
+                transform: translate(-50%, -50%);
+            }
+        
+            #sidetext {
+                width:25% ;
+                left: 78%;
+                top: 45%;
+            }
+        
+            #car {
+                left: 2%;
+                top: 39%;
+            }
+        
+            #sidetext .s1 {
+                font-size: 17px;
+                line-height: 17px;
+            }
+        
+            #sidetext .s2 {
+                font-size: 14px;
+                width: 70%;
+                line-height: 15px;
+            }
+        
+            #car img {
+                width: 76vw;
+            }
+        }
+
+
+
+@media (max-width:900px){
+    #page2 {
+        height: 60%;
+    }
+
+    #page2 #left {
+        width: 40%;
+        padding-left: 2vw;
+    }
+
+    #page2 #left img {
+        width: 60vw;
+    }
+
+    #right .heading {
+        margin-top: 1vw;
+        width: 100%;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 32.7px;
+    }
+
+    #right {
+        padding-left: 13vw;
+    }
+
+    #right .elem {
+        margin-left: 7vw;
+        gap: 12px;
+        width: 100%;
+    }
+
+    #right .elem img {
+        height: 40px;
+        width: 60px;
+    }
+
+    #right .elem p {
+        width: 140%;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15.44px;
+    }
+
+    #right .elem h4 {
+        font-size: 20px;
+        line-height: 25.65px;
+    }
+}
+
+
+@media (max-width:900px){
+    
+    #page3 {
+        margin-bottom: 70%;
+    }
+
+    #page3 h2 {
+        font-size: 30px;
+    }
+
+    #page3 #cards {
+        flex-wrap:wrap ;
+        justify-content: center;
+    }
+
+    #page3 #cards .elem {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media (max-width:900px){
+    
+   
+    #page4 .heading1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    #page4 h2 {
+        margin-top: 15vw;
+        font-size: 30px;
+        /* border-top: 1.5px solid yellow  ; */
+    }
+
+    #page4 .heading2 {
+        margin-top: 2vw;
+        font-size: 35px;
+    }
+
+    #page4 #div1 {
+       
+        flex-wrap: wrap;
+
+        
+    }
+
+    #page4 #div1 .elem {
+        width: 25vw;
+        height: 7vw;
+    }
+
+    #page4 #div2 .card {
+        align-items: space-between;
+        margin-bottom: -20vw;
+        
+    }
+
+    #page4 #div2 .card h4 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 41.13px;
+        text-align: center;
+    }
+
+    #page4 #div2 .card img {
+        width: 15vw;
+    }
+
+    #page4 #div2 .card p {
+        font-family: Roboto;
+        font-size: 12px;
+        line-height: 17.44px;
+        text-align: center;
+    }
+
+
+}
+
+        
+@media (max-width:550px){
+
+    #nav2{
+gap: 5vw;
+    }
+    #nav2 i{
+        display: initial;
+    }
+    #page1{
+        margin-bottom: -50vw;
+    }
+    #text h1 {
+        font-size: 10vh; /* Reduced font-size for smaller screens */
+        font-weight: 300;
+        top: 25%;
+    }
+
+    #sidetext {
+        width: 26vw; /* Adjust width for mobile */
+        left: 75%;
+        top: 35%;
+    }
+    #car {
+        left: 5%;
+        top: 30%;
+    }
+
+    #sidetext .s1 {
+        font-size: 10px; /* Adjust font size */
+    }
+
+    #sidetext .s2 {
+        font-size: 8px;
+        width: 70%; /* Adjust width */
+        line-height: 10px;
+    }
+    
+    #sidetext .s3{
+        font-size: 7px;
+        padding: 3px 4px;
+    }
+
+    #car img {
+        width:70vw; /* Adjust image size */
+    }
+
+    #text h4 {
+        position: absolute;
+        font-size: 7px;
+        background-color: #f1bc00;
+        padding: 3px 4px;
+        font-weight: 400;
+        top: 33%;
+        left: 26%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+@media (max-width:550px){
+    
+#page2 {
+    height: 40%;
+}
+#page2 #left {
+    width: 40%; /* Adjusted for mobile */
+    padding-left: 4vw;
+}
+#page2 #left img {
+    width: 56vw; /* Full-width image for mobile */
+}
+#right .heading {
+    width: 100%;
+    font-size: 14px; /* Adjusted font-size */
+    font-weight: 600;
+    line-height: 18px;
+}
+#page #right {
+    width: 60%;
+    padding-left: 6vw;
+}
+#right .elem {
+    margin-left: 2vw;
+    gap: -2px;
+    width: 100%;
+    margin-bottom: -4vw;
+}
+
+#right .elem img {
+    height: 20px;
+    width: 35px;
+}
+#right .elem p {
+    width: 160%;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 10px;
+}
+
+#right .elem h4 {
+    font-size: 10px;
+    line-height: 12px;
+}
+}
+
+@media(max-width:550px){
+    
+#page3 {
+    margin-bottom: 370%;
+}
+
+#page3 h2 {
+    font-size: 24px;
+}
+#page3 #cards {
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+}
+
+#page3 #cards .elem {
+    width: 90%; /* Full width for smaller screens */
+    margin-bottom: 10px; /* Space between the rows */
+}
+
+#page3 #cards .elem .card h4 {
+    padding-left: 3vw;
+    width: 90%;
+}
+}
+
+
+@media (max-width:550px)
+{
+    
+#page4 .heading1 {
+    font-size: 34px;
+    line-height: 32px;
+}
+
+#page4 h2 {
+    font-size: 34px;
+    /* border-top: 1px solid yellow; */
+}
+
+#page4 .heading2 {
+    font-size: 34px;
+}
+
+#page4 #div1 {
+    height: 10%;
+}
+
+#page4 #div1 .elem {
+    width: 26vw;
+    height: 7vw;
+    gap: 6px;
+}
+
+#page4 #div1 .elem img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+#page4 #div1 .elem h4{
+    font-size: 12px;
+}
+
+#page4 #div2 .card {
+    align-items: space-between;
+    margin-bottom: -30vw;
+}
+
+#page4 #div2 .card h4 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+}
+
+#page4 #div2 .card img {
+    width: 17vw;
+}
+
+#page4 #div2 .card p {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+}
+
+@media (max-width:550px){
+    
+#page5 {
+    margin-top: -15vw;
+    height: 50%;
+}
+
+#page5 #mid .elem div h5 {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+}
+
+#page5 #mid .elem h4 {
+  
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+}
+
+#page5 #last{
+    font-size: 10px;
+    margin-top: 10vw;
+    padding-top: 6vw;
+}
+
+#page5 #last img{
+    width: 25px;
+    height: 25px;
+   
+}
+}
